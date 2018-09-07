@@ -21,4 +21,4 @@ jobs:
       if: env(FOO) != branch
       
 notifications:
-  webhooks: http://postb.in/b/qraQpPEu
+  webhooks: http://postb.in/we95OfIg
