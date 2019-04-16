@@ -1,9 +1,2 @@
-import: 
-  source: ./other.yml
-  mode: deep_merge
-
-env:
-  global: foo
-#    FOO: foo
-
-before_script: echo "hello from .travis.yml"
+language: python
+python: 
