@@ -7,3 +7,5 @@ env:
 #    FOO: foo
 
 before_script: echo "hello from .travis.yml"
+
+script pwd
