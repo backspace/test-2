@@ -8,4 +8,4 @@ env:
 
 before_script: echo "hello from .travis.yml"
 
-script pwd
+script: pwd
