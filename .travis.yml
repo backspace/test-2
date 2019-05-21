@@ -1,11 +1,2 @@
-# import: 
-#   source: ./other.yml
-#   mode: deep_merge
-
-env:
-  global: foo
-#    FOO: foo
-
-before_script: echo "hello from .travis.yml"
-
-script: pwd
+language: node_js
+script: echo yo
