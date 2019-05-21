@@ -1,6 +1,6 @@
-import: 
-  source: ./other.yml
-  mode: deep_merge
+# import: 
+#   source: ./other.yml
+#   mode: deep_merge
 
 env:
   global: foo
