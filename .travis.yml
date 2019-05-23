@@ -3,8 +3,7 @@ import:
   mode: deep_merge
 
 env:
-  - FOO=foo BAR=bar
-  - BAZ=baz
+  FOO=foo BAR=bar
 
 before_script: echo "hello from .travis.yml"
 
