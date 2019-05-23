@@ -4,8 +4,7 @@ import:
 
 env:
   matrix:
-    - FOO: foo
-      BAR: bar
-    - BAZ: baz
+    FOO: foo
+    BAR: bar
 
 before_script: echo "hello from .travis.yml"
