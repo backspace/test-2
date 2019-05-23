@@ -10,4 +10,4 @@ env:
 
 before_script: echo "hello from .travis.yml"
 
-script: env
+script: echo "FOO: $FOO, BAR: $BAR, ONE: $ONE"
