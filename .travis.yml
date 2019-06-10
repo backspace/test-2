@@ -2,10 +2,16 @@ import:
   source: "./other.yml"
   mode: deep_merge
 
-env:
-  - FOO=foo BAR=bar
-  - BAZ=baz
+# env:
+#   - FOO=foo BAR=bar
+#   - BAZ=baz
 
 before_script: echo "hello from .travis.yml"
 
 script: 'echo "FOO: $FOO, BAR: $BAR, ONE: $ONE"'
+
+matrix:
+  include: 
+    env:
+      global:
+        GLOBAL=true
