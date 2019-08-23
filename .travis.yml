@@ -1,6 +1,3 @@
-language: shell
-
-script:
 - sudo wget -qO - https://package.perforce.com/perforce.pubkey | sudo apt-key add -
 - echo 'deb http://package.perforce.com/apt/ubuntu xenial release' | sudo tee /etc/apt/sources.list.d/perforce.list
 - sudo apt-get update
@@ -11,4 +8,24 @@ script:
 - export P4CLIENT=perforce # correct?
 - p4 trust -y
 - echo $P4_PASSWORD | p4 login -a
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i 
 - p4 client -S //depot/main -o | p4 client -i 
