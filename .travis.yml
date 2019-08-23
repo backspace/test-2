@@ -28,4 +28,4 @@
 - p4 client -S //depot/main -o | p4 client -i 
 - p4 client -S //depot/main -o | p4 client -i 
 - p4 client -S //depot/main -o | p4 client -i 
-- p4 client -S //depot/main -o | p4 client -i 
+- p4 client -S //depot/main -o | p4 client -i
