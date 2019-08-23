@@ -8,7 +8,7 @@ script:
 - export P4PORT=ssl:eu-perforce.assembla.com:1667
 - export P4HOST=travisci/VCS
 - export P4USER=svenfuchs
-- export P4CLIENT=perforce # correct?
+- export P4CLIENT=client # correct?
 - p4 trust -y
 - echo $P4_PASSWORD | p4 login -a
 - p4 client -S //depot/main -o | p4 client -i 
