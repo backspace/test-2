@@ -1,3 +1,6 @@
+language: shell
+
+script:
 - sudo wget -qO - https://package.perforce.com/perforce.pubkey | sudo apt-key add -
 - echo 'deb http://package.perforce.com/apt/ubuntu xenial release' | sudo tee /etc/apt/sources.list.d/perforce.list
 - sudo apt-get update
