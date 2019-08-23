@@ -13,4 +13,4 @@ script:
 - echo $P4_PASSWORD | p4 login
 - p4 client -S //depot/main -o | p4 client -i
 - echo $P4_PASSWORD | p4 client -S //depot/main -o client.txt
-- echo $P4_PASSWORD | p4 client -i << client.txt
+- echo $P4_PASSWORD | p4 client -i < client.txt
