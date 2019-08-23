@@ -1,8 +1,5 @@
 language: shell
 
-env:
-- secure: "GKOJ2iH/1xH4HkKK/Co3cCE7uAwP5bwMUEj1pIzgfpbFE6+iB7sUwDux8ttNEEILbQqe/0BMjKYP8IyRVC7Ihomd65u1HdKSfqLnZag3kn7nfrFuPWr/8XSDp7M/dIEKxqh98IyQK0521HsEahwm3YihWWoTP7Wy3Vv9gZJyQ/BnHzKJQf29LS3mMx23HzqRzJO3wKcBTl/mKjimECS0xfGUlvmA9l6YHMXmVkzLxw7L1Jn0PeSqKAXiXIW0IWdjqd7ptlJ7zDQXqWsdJfBhNXaK9pnem/ctfXcGiB7tabhUKgLSOw9qH4k14jFXFHwciiMxzZrTI/SPusZBdD/Ho+7KFHKn9DLbgC3AltbX+2HB+oM44ry8JIgnH5E8MLs5WgoaM7RjlGNJLBsb2Q1iHlnX3EOxRvtmM/mvnuKyS5c42EB/jA22SKjZ0fcNf8j6csV9VJKR7cq6C9STs0FR+3Utyl2j1yeTgvpOIYbL08n4ipKo4Xp1S2O7dHk3xEPAvnf2RY4mqMS42RgMdTbPqShE+sY/ijOULA0ZkXE+Ye8wm+oRU1jdVc/n7Tq6KyjVOetg6CeSFHUG1xXQfZu8vafhv/XThwHq9/Zv56kxM8YYy0/oCoRXi7wa5JDQqJC0NuQ4vTmPD05NcTjGGYH4NclV0fHP4rDhb5kaZab0dxw="
-
 script:
 - sudo wget -qO - https://package.perforce.com/perforce.pubkey | sudo apt-key add -
 - echo 'deb http://package.perforce.com/apt/ubuntu xenial release' | sudo tee /etc/apt/sources.list.d/perforce.list
