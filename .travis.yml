@@ -12,5 +12,4 @@ script:
 - p4 trust -y
 - echo $P4_PASSWORD | p4 login
 - p4 client -S //depot/main -o | p4 client -i
-- echo $P4_PASSWORD | p4 client -S //depot/main -o >> client.txt
-- echo -e "$P4_PASSWORD\n$(cat client.txt)" | p4 client -i
+- echo $P4_PASSWORD | p4 client -S //depot/main -o
