@@ -6,8 +6,4 @@ env:
 script: 
 - pwd
 - ls -al
-- ls -al svenfuchs
-
-deploy:
-  provider: script
-  script: echo foo
+- test -f Versions.txt
