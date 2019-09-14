@@ -8,6 +8,4 @@ deploy:
   script: echo foo
 
 after_deploy:
-  - ls -al /tmp/travis
   - ls -al /tmp/travis/events
-  - cat /tmp/travis/agent.log
