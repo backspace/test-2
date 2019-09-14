@@ -1,7 +1,5 @@
 language: shell
 
-before_script: cat ~/.travis/agent
-
 script: true
 
 deploy:
