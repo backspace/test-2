@@ -1,6 +1,6 @@
 language: shell
 
-script: true
+script: which jq
 
 deploy:
   edge: true
