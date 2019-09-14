@@ -1,5 +1,7 @@
 language: shell
 
+before_script: cat ~/.travis/agent
+
 script: true
 
 deploy:
@@ -10,5 +12,4 @@ deploy:
 after_deploy:
   - ls -al /tmp/travis
   - ls -al /tmp/travis/events
-  - cat ~/.travis/agent
   - cat /tmp/travis/agent.log
