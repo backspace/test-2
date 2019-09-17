@@ -5,7 +5,6 @@ script: which jq
 deploy:
   edge: true
   provider: script
-  strategy: foo
   script: echo foo
 
 after_deploy:
