@@ -1,11 +1,6 @@
 language: shell
-
-script: which jq
-
-deploy:
-  edge: true
-  provider: script
-  script: echo foo
-
-after_deploy:
-  - ls -al /tmp/travis/events
+env:
+  global: 
+    FOO: 
+      secure: "tcnGKmyB799YyviChTDpGvR/7Iei01mgB6NkVb/CTwnHxOikphnbwzTDnTVvKqXrCHEea/tp7rd/ip04QMGfb6NQgBylluiLjU3L89LF1sBMuHp1Y33J73BdoZokQ+b7WSDgCDwM/RsPJYoK8DNCuyGLHwd/pMFYlD6NwZq2XjwpIMZSaOPx57ZPaVgFMr4dILuN+Jo815VbkcgtLErtp7+dbsR4Ly2Vq3fAoFZOnTes5nBm8p5JoxfZ/NQh6BeHi9J2cB2I17sDmTnwBPU7rI60tyYEte1vqr6wiwBCoxAgnobpgwkYWLvlkiVWC3QRN9noJLIJuhzmhjhNVkYjGknGkHaJGgSwtRYSl7f3vTbgiyRqEEUBHr4HqBQcQ74s75RwPRpVVF64hzyL409OfHSleos1GYEKY7OZ9YNNFwuaynqHCGy1sifbgAXZjGusCe2GoiIP+suPcQysKjp1KJrZjW8ZHn1D/fvuiTk0OuqpqUE1VkJhw5sYrcH6dYIiOLcPk7F3ivg4D/fbAgd0TtDqT/iIoB1ZCAxv8iV1Cb7g624vB+6rBldW58Fj+beHsbNMstd1r28Suhylj5bJlGvhWfSHfjVvs3ggA0c3gH5dCJDmCS18mzBB8OcqPxfSUD7JGSVs8+GPI7zFi+tsQPLF/9QaNPfJMR2ipE+/eyg="
+script: echo $FOO
