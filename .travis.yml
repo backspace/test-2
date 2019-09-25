@@ -9,6 +9,10 @@ language: shell
 #   matrix:
 #   - ONE=one
 #   - TWO=two
+env: 
+- ONE=one
+- TWO: two
+
 script: echo $FOO $BAR $BAZ $BUZ
 notifications:
   slack:
