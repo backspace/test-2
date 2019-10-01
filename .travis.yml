@@ -1,2 +1,4 @@
 language: shell
 script: true
+notifications:
+  webhooks: http://requestbin.net/r/1lwvdcl1
