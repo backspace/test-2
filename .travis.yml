@@ -1,6 +1,6 @@
 language: shell
 script: true
 env:
-- FOO=foo
+  FOO: foo
 notifications:
   webhooks: http://requestbin.net/r/1lwvdcl1
