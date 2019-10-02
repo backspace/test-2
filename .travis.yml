@@ -1,6 +1,8 @@
 language: shell
 os: windows
+
+# env:
+#   RUBYSHELL: '/bin/bash'
+
 install: true
 script: ruby foo.rb
-env:
-  RUBYSHELL: '/bin/bash'
