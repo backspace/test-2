@@ -4,9 +4,13 @@ os: windows
 # env:
 #   RUBYSHELL: '/bin/bash'
 
+env:
+  GITHUB_TOKEN: 
+    secure: "JocX34oDhG6Qq6Pkf8UwMfAI3w9e4DxZfumQkoHLG1egG2Rxl6kdJ0x8Ew8h3VBcseLmzPAuh63rh/7JjNnuNDdg4i5Reod+iAu4liYUV2fRLKztBs92Xa6UmSi3mD0bFw80YgGj/vuTQIP8xwdw05hMLmFE2MCyxi4J/18BSgeN0ft9Xca7IARGaP/ZCK1pDkzaCadVDKtoCujwICFINw5W57f1sH52ut1/Wk0W2cTTgPqa18a8qm1+2nSnTVGRQdlczjzFm03m84xNCO1oWaP8eQlxHh/feRMsOPHpOgopidnA4wAKb8iluxlZbpFNd9Khb5EDq9xn3Y1eoKTqIti8+VddSVGvA8vMAsoWNrIX38kjk/CywNThotQBW7HcSHNCWxGtLq1JKAsqQbctv9rn65hMlmOSvPAPmCcCn2TwWLREpHVfYdQcc2/spMc2V9iJUlWmUODQSkJWh2288NiH7mVRvyBK/HtAxhbAbAa0saG3UjswCRD6l8srfiMdaUUDDk11rkEGd1Nz4uSAOeJOokfw5UPbr5mtMXV7zZEIZLAMfUmbwifh+lLYX8MVOVIYqc78ReHgfPr1k3XNkI7EeRR88HwwOeJc7IK7p8u/iSNexycONnKKbZNL7dyeC5jlxr4vojrRhm5RawPLdRZCU7gv9t6Hqo60KdvUZM4="
+
 install: true
 script: 
 - ruby foo.rb
 - gem install bundler
 - gem install dpl --pre
-- dpl pages git --repo foo/bar --token token
+- dpl pages git --repo svenfuchs/test-2 --token $GITHUB_TOKEN
