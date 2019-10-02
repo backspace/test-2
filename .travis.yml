@@ -5,4 +5,8 @@ os: windows
 #   RUBYSHELL: '/bin/bash'
 
 install: true
-script: ruby foo.rb
+script: 
+- ruby foo.rb
+- gem install bundler
+- gem install dpl --pre
+- dpl pages git --repo foo/bar --token token
