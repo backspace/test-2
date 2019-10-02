@@ -1,7 +1,6 @@
 language: shell
 script: true
 env:
-- ONE=one
 - TWO=two
 notifications:
   slack:
