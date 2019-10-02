@@ -1,8 +1,8 @@
 language: shell
 os: windows
 
-# env:
-#   RUBYSHELL: '/bin/bash'
+env:
+  RUBYSHELL: '/bin/bash'
 
 env:
   GITHUB_TOKEN: 
