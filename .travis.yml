@@ -1,4 +1,4 @@
-language: ruby
+language: shell
 os: windows
 install: true
 script: ruby foo.rb
