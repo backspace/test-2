@@ -2,3 +2,4 @@ language: ruby
 ruby: 2.6
 script: true
 unknown: key
+version: ~> 1.0
