@@ -5,3 +5,6 @@ unknown: key
 version: ~> 1.0
 notifications:
   - invalid: seq
+addons:
+  artifacts:
+    key: key
