@@ -4,7 +4,7 @@ script: true
 unknown: key
 version: ~> 1.0
 notifications:
-  - invalid: seq
+  - invalid: super-long-string-on-an-object-nested-in-an-unexpected-array
 addons:
   artifacts:
     secret: plain
