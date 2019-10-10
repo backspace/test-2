@@ -4,4 +4,4 @@ script: true
 unknown: key
 version: ~> 1.0
 notifications:
-  - invalid_seq
+  - invalid: seq
