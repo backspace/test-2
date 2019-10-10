@@ -7,4 +7,4 @@ notifications:
   - invalid: seq
 addons:
   artifacts:
-    key: key
+    secret: plain
