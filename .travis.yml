@@ -3,3 +3,5 @@ ruby: 2.6
 script: true
 unknown: key
 version: ~> 1.0
+notifications:
+  - invalid_seq
