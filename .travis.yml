@@ -1,10 +1,6 @@
-language: ruby
-ruby: 2.6
+language: shell
 script: true
-unknown: key
-version: ~> 1.0
-notifications:
-  - invalid: super-long-string-on-an-object-nested-in-an-unexpected-array
-addons:
-  artifacts:
-    secret: plain
+env:
+  matrix:
+  - FOO=foo
+  - BAR=bar
