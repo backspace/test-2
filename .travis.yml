@@ -1,6 +1,6 @@
 language: shell
 script: true
 env:
-  matrix:
+  jobs:
   - FOO=foo
   - BAR=bar
