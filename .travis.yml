@@ -5,5 +5,5 @@ env:
   - FOO=foo
   - BAR=bar
 jobs:
-  include:
-    - env: BAZ=baz
+  - env: BAZ=baz
+    script: echo baz
