@@ -4,3 +4,5 @@ env:
   jobs:
   - FOO=foo
   - BAR=bar
+jobs:
+  - env: BAZ=baz
