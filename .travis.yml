@@ -1,9 +1,2 @@
-language: shell
+langauge: shell
 script: true
-env:
-  jobs:
-  - FOO=foo
-  - BAR=bar
-jobs:
-  - env: BAZ=baz
-    script: echo baz
