@@ -1,2 +1,6 @@
-langauge: shell
-script: true
+matrix:
+  include:
+    - language:
+        - cpp
+      script:
+        - true
