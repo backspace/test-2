@@ -1,6 +1,3 @@
-matrix:
-  include:
-    - language:
-        - cpp
-      script:
-        - true
+import:
+- source: ./other.yml
+  mode: deep_merge
