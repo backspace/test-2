@@ -1,4 +1,6 @@
-import: ./two.yml
+import: 
+- source: ./two.yml
+  mode: deep_merge_append
 env:
   global:
     - ONE=one
