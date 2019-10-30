@@ -4,4 +4,4 @@ import:
 env:
   global:
     - TRAVIS_YML=travis_yml
-before_script: echo hello from .travis.yml
+before_script: echo "hello from .travis.yml"
