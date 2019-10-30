@@ -1,0 +1,4 @@
+env:
+  global:
+    - TWO=two
+after_script: hello from two.yml    
