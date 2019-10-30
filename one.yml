@@ -1,6 +1,6 @@
 import: 
 - ./two.yml
 env:
-  global:
+  global: !seq+append
     - ONE=one
 script: echo "hello from one.yml"
