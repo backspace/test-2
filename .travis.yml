@@ -1,6 +1,4 @@
-import:
-- source: ./one.yml
-  mode: deep_merge_append
+import: ./one.yml
 env:
   global:
     - TRAVIS_YML=travis_yml
