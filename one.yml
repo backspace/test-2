@@ -4,4 +4,4 @@ env:
   global:
     BAR: bar
 
-script: echo "hello from other.yml"
+script: echo "hello from one.yml"
