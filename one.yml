@@ -1,7 +1,6 @@
 import: 
-- source: ./two.yml
-  mode: deep_merge_append
+- ./two.yml
 env:
-  global:
+  global: !seq+append
     - ONE=one
 script: echo "hello from one.yml"
