@@ -1,5 +1,4 @@
-import: 
-- ./two.yml
+import: ./two.yml
 env:
   global:
     - ONE=one
