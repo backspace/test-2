@@ -1,5 +1,5 @@
 import:
-- source: ./other.yml
+- source: ./one.yml
   mode: deep_merge_append
 env:
   global:
