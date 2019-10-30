@@ -2,6 +2,6 @@ import:
 - source: ./one.yml
   mode: deep_merge_append
 env:
-  global: !seq+append
+  global:
     - TRAVIS_YML=travis_yml
 before_script: echo "hello from .travis.yml"
