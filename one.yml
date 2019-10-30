@@ -4,4 +4,4 @@ import:
 env:
   global:
     - ONE=one
-script: hello from one.yml
+script: echo "hello from one.yml"
