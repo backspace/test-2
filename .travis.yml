@@ -1,5 +1,5 @@
 import: 
-- source: ./one.yml
+- source: svenfuchs/test-2:one.yml
   mode: deep_merge
 env:
   global: !seq+append
