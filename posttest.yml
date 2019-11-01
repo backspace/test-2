@@ -1,0 +1,5 @@
+script:
+  - 'post'
+matrix:
+  include:
+    - node_js: "post"

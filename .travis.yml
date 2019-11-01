@@ -1,7 +1,5 @@
-import: 
-- source: svenfuchs/test-2:one.yml
-  mode: deep_merge_append
-env:
-  global:
-    - TRAVIS_YML=travis_yml
-before_script: echo "hello from .travis.yml"
+import:
+ - all.yml
+ - pretest.yml
+ - posttest.yml
+ - coverage.yml

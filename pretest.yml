@@ -1,0 +1,5 @@
+script:
+  - 'pre'
+matrix:
+  include:
+    - node_js: "pre"

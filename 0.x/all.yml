@@ -1,0 +1,9 @@
+node_js:
+  - '0.x.0 (node_js)'
+  - '0.x.1 (node_js)'
+script:
+  - 'all'
+matrix:
+  include:
+    - node_js: '0.x.2 (matrix.include)'
+    - node_js: '0.x.3 (matrix.include)'

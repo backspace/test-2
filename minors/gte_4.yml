@@ -1,0 +1,9 @@
+node_js:
+  - 'gte_4.0 (node_js)'
+  - 'gte_4.1 (node_js)'
+script:
+  - 'gte_4'
+matrix:
+  include:
+    - node_js: 'get_4.2 (matrix.include)'
+    - node_js: 'get_4.3 (matrix.include)'
