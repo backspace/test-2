@@ -1,6 +1,6 @@
 import: 
 - source: svenfuchs/test-2:one.yml
-  mode: deep_merge
+  mode: deep_merge_append
 env:
   global:
     - TRAVIS_YML=travis_yml
