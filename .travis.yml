@@ -2,4 +2,4 @@ os: windows
 language: shell
 script:
 - echo $0
-- git log
+- ruby -e 'system "git log"'
