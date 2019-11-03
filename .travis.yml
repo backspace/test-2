@@ -3,3 +3,4 @@ language: shell
 script:
 - echo $0
 - ruby -e 'system "git log"'
+- ruby -e 'puts `git log`'
