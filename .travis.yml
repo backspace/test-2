@@ -2,5 +2,5 @@ os: windows
 language: shell
 script:
 - echo $0
-- ruby -e 'system "git log"'
-- ruby -e 'puts `git log`'
+- ruby -e 'system "git show"'
+- ruby -e 'puts `git show`'
