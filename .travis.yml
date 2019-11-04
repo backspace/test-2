@@ -12,4 +12,15 @@ env:
   - A=9
 matrix:
   fast_finish: true
+  allow_failure:
+    env: A=0
+    env: A=1
+    env: A=2
+    env: A=3
+    env: A=4
+    env: A=5
+    env: A=6
+    env: A=7
+    env: A=8
+    env: A=9
 script: false
