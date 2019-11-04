@@ -2,5 +2,5 @@ os: windows
 language: shell
 script:
 - echo $0
+- ruby -e 'puts `git config user.email >/dev/null 2>/dev/null || git config user.email `whoami`@localhost`'
 - ruby -e 'system "git show"'
-- ruby -e 'puts `git show`'
