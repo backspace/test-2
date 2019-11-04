@@ -1,15 +1,15 @@
 language: shell
 env:
-  A: 0
-  A: 1
-  A: 2
-  A: 3
-  A: 4
-  A: 5
-  A: 6
-  A: 7
-  A: 8
-  A: 9
+  - A=0
+  - A=1
+  - A=2
+  - A=3
+  - A=4
+  - A=5
+  - A=6
+  - A=7
+  - A=8
+  - A=9
 matrix:
   fast_finish: true
 script: false
