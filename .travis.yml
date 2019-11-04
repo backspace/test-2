@@ -2,6 +2,6 @@ os: windows
 language: shell
 script:
 - echo $0
-- ruby -e 'p `git config user.email >/dev/null 2>/dev/null || git config user.email $(whoami)@localhost`'
+- ruby -e 'system "git config user.email >/dev/null 2>/dev/null || git config user.email `whoami`@localhost"'
 - git config user.email
 - ruby -e 'system "git show"'
