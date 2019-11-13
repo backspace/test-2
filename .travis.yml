@@ -1,4 +1,3 @@
-version: ~> 1.0
 import: 
 - source: svenfuchs/test-2:one.yml
   mode: deep_merge_append
