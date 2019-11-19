@@ -1,7 +1,7 @@
 language: shell
+env: FOO=foo
 jobs:
   - name: one
-    script: echo one
+    script: echo $FOO one
   - name: two
-    script: echo two
-    if: fork = false
+    script: echo $FOO two
