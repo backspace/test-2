@@ -5,3 +5,4 @@ env:
 jobs:
   exclude:
     - env: FOO=one
+      if: branch = master
