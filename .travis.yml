@@ -1,8 +1,5 @@
 language: shell
-env:
-  - FOO=one
-  - FOO=two
-jobs:
-  exclude:
-    - env: FOO=one
-      if: branch = other
+addons:
+  apt:
+    packages: 
+      - python-mako
