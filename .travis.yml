@@ -5,4 +5,4 @@ env:
 jobs:
   allow_failures:
     - env: FOO=one
-      if: branch = master
+      if: branch = other
