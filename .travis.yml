@@ -3,4 +3,5 @@ addons:
   apt:
     sources:
     - deadsnakes
+    - adduser
     - sourceline: 'ppa:ubuntu-toolchain-r/test'
