@@ -1,8 +1,7 @@
 language: shell
-env:
-- FOO=one
-- FOO=two
-jobs:
-  allow_failures:
-    - env: FOO=one
-      if: branch = other
+addons:
+  apt:
+    sources:
+    - deadsnakes
+    - adduser
+    - sourceline: 'ppa:ubuntu-toolchain-r/test'
