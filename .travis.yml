@@ -1,7 +1,7 @@
 language: shell
-env: FOO=foo
+env:
+  - FOO=one BAR=one
+  - FOO=two BAR=two
 jobs:
-  - name: one
-    script: echo $FOO one
-  - name: two
-    script: echo $FOO two
+  exclude:
+    - FOO=one
