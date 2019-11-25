@@ -1,4 +1,8 @@
 language: shell
+env:
+  - FOO=foo
+  - BAR=bar
 jobs:
-  include:
-    if: branch = other
+  allow_failures:
+    - env: BAR=bar
+      if: branch = other
