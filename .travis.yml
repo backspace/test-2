@@ -2,4 +2,4 @@ language: shell
 script: echo .travis.yml
 import:
   - source: one.yml
-    if: branch = master
+    if: branch = other
