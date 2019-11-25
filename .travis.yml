@@ -1,2 +1,4 @@
 language: shell
-if: branch = other
+jobs:
+  include:
+    if: branch = other
