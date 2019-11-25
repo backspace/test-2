@@ -1,12 +1,5 @@
 language: shell
-stages:
-  - one
-  - name: two
+script: echo .travis.yml
+import:
+  - source: one.yml
     if: branch = master
-jobs:
-  include:
-    - stage: one
-      script: echo one
-    - stage: two
-      script: echo two
-      if: branch = other
