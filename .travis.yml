@@ -3,6 +3,6 @@ env:
   - FOO=foo
   - BAR=bar
 jobs:
-  allow_failures:
+  exclude:
     - env: BAR=bar
       if: branch = master
