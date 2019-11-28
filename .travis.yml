@@ -3,3 +3,6 @@ script: echo .travis.yml
 import:
   - source: one.yml
     if: branch = master
+deploy:
+  - provider: pages
+    edge: true
