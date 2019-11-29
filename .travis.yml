@@ -1,8 +1,4 @@
 language: shell
-script: echo .travis.yml
-import:
-  - source: one.yml
-    if: branch = master
-deploy:
-  - provider: pages
-    edge: true
+script: echo $SECRET
+env:
+- secure: "EFtLTlVriVz+tvkGL9ApeOGNrXO7ZEbZ09NXcuLtf9nLlSBrKC5ncmgc7q7L7la+Bx1AlmvE13kazV2biWYOfZh6cc4+i+bbBHJzVg3IKUG9JD+mnFRgFOCHd9trZILNzz9kxD3CVRGMKlux2Kzbj3OBCKi7yqg5mlX2pdpwrJYHj19RE4E3xtMfgh60TOR64I0wt2dBJJDd93+aWxvO4ba5ysi0meq8pV7RTwIy8Opelq1nnKGJD2/Qos+0KotkzRBEmTpjMerQAPpJafaVLDYasBTmzlv7jgzH2KLqiFFA7wjanf/wbit6ODhCMkSSraXmrorxvEky3JcdzQ43/1aVM+LzsoWTzTecBST6zYjcG46fl0TNqcQIDthytBDTNSXK/S4qmtmeez1ExQb0GnMtiyT9KfPdF2qxsxc4hSN5RsOVVhvEnBLamz9XQYU/clrToIoXheSIvPBzA1mVuUd0vm+uQVA0UAOg2Wi35yBmH7QcDep3GrA8w/CRSBNyDpV1pJVSoQgtNgX4c0k6dqIc8WgrU0oA+eDLE8a68YKys3coY9dZneBpHVkNQeEiHOx0cCmep6mGzEcZYFez9gDBfGqwbmNGtSPXr6NzLn+92oFm5qCljQB4PF4Tog7N+dpUYJX2izo/Msqdy1UhVvoDlmNVDjvl/LIm4KcPRq8="
