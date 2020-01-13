@@ -18,7 +18,7 @@ jobs:
       php: 7.3
       env: ONE=one
      
-    - php: 7.2
+    - php: 7.0
       env: TWO=two
 
 script: true
