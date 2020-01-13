@@ -15,10 +15,7 @@ stages:
 jobs:
   include:
     - stage: quick
-      php: 7.3
-      env: ONE=one
-     
-    - php: 7.0
-      env: TWO=two
+      php: 7.0
+    - php: 7.3
 
 script: true
