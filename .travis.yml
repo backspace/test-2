@@ -6,24 +6,24 @@ php:
   - 7.2
 
 stages:
-  - name: one
-  - name: two
-    if: branch NOT IN (master)
-  - name: three
+  - name: sniff
+  - name: quicktest
+    if: type = push AND branch NOT IN (master)
+  - name: test
     if: branch IN (master, develop)
 
 jobs:
   fast_finish: true
 
   include:
-    - stage: one
+    - stage: sniff
       script: echo 1
-    - stage: two
+    - stage: quicktest
       script: echo 2
     - script: echo 3
     - script: echo 4
     - script: echo 5
-    - stage: three
+    - stage: test
       script: echo 6
     - script: echo 7
     - script: echo 8
