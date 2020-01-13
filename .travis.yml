@@ -2,15 +2,6 @@ dist: trusty
 
 language: php
 
-## Cache composer and apt downloads.
-cache:
-  apt: true
-  directories:
-    # Cache directory for older Composer versions.
-    - $HOME/.composer/cache/files
-    # Cache directory for more recent Composer versions.
-    - $HOME/.cache/composer/files
-
 php:
   - 5.4
   - 5.5
