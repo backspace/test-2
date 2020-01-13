@@ -1,17 +1,17 @@
-language: php
+language: shell
 
-php:
-  - 7.0
-  - 7.1
+env:
+  - ONE=one
+  - TWO=two
 
 stages:
-  - name: quick
+  - name: one
   - name: test
 
 jobs:
   include:
-    - stage: quick
-      php: 7.3
-    - php: 7.0
+    - stage: one
+      env: THREE=three
+    - env: ONE=one
 
 script: true
