@@ -1,4 +1,12 @@
-language: shell
-script: echo $SECRET
-env:
-- secure: "DQ4QBdot2tbCZTXx1MPjgp9j1KfNhD8Vn7EYek+Z52P5VNRQOy7GT5ccvjVA8E8YbQIEN2jHUy1y3weMhDXCDWcYjPqAEUZhJvzkPTOqH4RQ04M8/xmLZNKVXBku1yHDsC5VlCiaEbgh+9TYwhhLe5DFfWoG3bSfnlgbB0hZjc4nea95cCtsOU6nwAcE6bu70K0STs6jIrCmqjPkYG8EoDJzV+5DenfJzTECZjBH8dz5SHGCbfM0WGCWGAZUvQis4ypV/HrhNKn1h0jlDR8ZLNRAkQhD9iQ1UTBmZ9pT5/KzHVXFuWmQd2dQvuJgokuN8pw3jAqI6UoYqrJ9qsve3VeTTJ2TBlRpfpjQS05WI8iKPPSjum41hOvQzmr8N/khkV1t/BS5BCasyh8LN3YV0yCnLM8fk4rGv29Q92od7MchoEpm3+e67cQqkn7Le47WcCBZO9x7zeFJSIdDWHlQ1X18yh+WYTKcg6gYVfyysCgYNm8c8+otqoKlLi0hW26TNFwpManWB/NGbq+aJaZZBrK4Q9wwmwVY2Zh/psvZGuo7q1A7Ayj+Q4b4O2bdt60oit1uBl/A9DIcGsnWFEXeiAl/6ZFvHwu8K2RzQVuFBjb9XSHplGO8VBjoFAl0Gl/+VXWWECOZ2c99VafWgGKqhbZ99M8FuP9jytALASgp6Yw="
+language: shells
+stages:
+- one
+- two
+matrix:
+  include:
+  - script: echo foo
+    stage: one
+  - script: echo bar
+  - script: echo baz
+    stage: two
+  - script: echo buz
