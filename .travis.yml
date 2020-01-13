@@ -1,8 +1,9 @@
 language: php
 
-env:
-  - ONE=one
-  - TWO=two
+php:
+  - 7.0
+  - 7.1
+  - 7.2
 
 stages:
   - name: quicktest
