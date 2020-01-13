@@ -24,9 +24,5 @@ jobs:
 
     - php: 5.4
       env: PHPCS_VERSION="dev-master" LINT=1
-      
-    - stage: test
-      php: 7.3
-      env: PHPCS_VERSION="dev-master" LINT=1
 
 script: true
