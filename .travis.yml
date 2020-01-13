@@ -1,12 +1,28 @@
-language: shells
+language: shell
+
 stages:
-- one
-- two
-matrix:
+  - name: one
+  - name: two
+    if: branch NOT IN (master)
+  - name: three
+    if: branch IN (master, develop)
+
+jobs:
   include:
-  - script: echo foo
-    stage: one
-  - script: echo bar
-  - script: echo baz
-    stage: two
-  - script: echo buz
+    - stage: one
+      script: echo 1
+
+    - stage: two
+      script: echo 2
+     
+    - script: echo 3
+    - script: echo 4
+    - script: echo 5
+     
+    - stage: three
+      script: echo 6
+     
+    - script: echo 7
+    - script: echo 8
+    - script: echo 9
+    - script: echo 10
