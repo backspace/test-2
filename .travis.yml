@@ -6,8 +6,8 @@ php:
   - 7.2
 
 env:
-  - PHPCS_VERSION="dev-master" LINT=1
-  - PHPCS_VERSION="3.0.2"
+  - ONE=one
+  - TWO=two
 
 stages:
   - name: quicktest
@@ -17,12 +17,12 @@ jobs:
   include:
     - stage: quicktest
       php: 7.3
-      env: PHPCS_VERSION="dev-master" LINT=1
+      env: ONE=one
      
     - php: 7.2
-      env: PHPCS_VERSION="3.0.2"
+      env: TWO=two
 
     - php: 5.4
-      env: PHPCS_VERSION="dev-master" LINT=1
+      env: ONE=one
 
 script: true
