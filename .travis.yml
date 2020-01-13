@@ -6,6 +6,8 @@ env:
 
 jobs:
   include:
+    - stage: one
+      env: ONE=one
     - env: TWO=two
 
 script: true
