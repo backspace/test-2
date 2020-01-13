@@ -2,11 +2,6 @@ dist: trusty
 
 language: php
 
-php:
-  - 7.0
-  - 7.1
-  - 7.2
-
 env:
   - PHPCS_VERSION="dev-master" LINT=1
   - PHPCS_VERSION="3.0.2"
