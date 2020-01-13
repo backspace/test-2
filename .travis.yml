@@ -5,20 +5,21 @@ php:
   - 7.1
   - 7.2
 
+env:
+  - ONE=one
+  - TWO=two
+
 stages:
-  - name: quicktest
+  - name: quick
   - name: test
 
 jobs:
   include:
-    - stage: quicktest
+    - stage: quick
       php: 7.3
       env: ONE=one
      
     - php: 7.2
       env: TWO=two
-
-    - php: 5.4
-      env: ONE=one
 
 script: true
