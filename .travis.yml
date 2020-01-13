@@ -14,7 +14,6 @@ stages:
   - name: test
 
 jobs:
-  fast_finish: true
   include:
     - stage: quicktest
       php: 7.3
@@ -29,9 +28,5 @@ jobs:
     - stage: test
       php: 7.3
       env: PHPCS_VERSION="dev-master" LINT=1
-
-  allow_failures:
-    - php: "nightly"
-
 
 script: true
