@@ -15,7 +15,7 @@ stages:
 jobs:
   include:
     - stage: quick
-      php: 7.0
-    - php: 7.3
+      php: 7.3
+    - php: 7.0
 
 script: true
