@@ -1,28 +1,7 @@
 language: shell
 
-stages:
-  - name: one
-  - name: two
-    if: branch NOT IN (master)
-  - name: three
-    if: branch IN (master, develop)
+env:
+  global:
+    - CSP_ALLOWED_HOSTS="http://localhost:8081 ws://localhost:8081 http://localhost:9953 ws://localhost:9080 http://localhost:9080 ws://localhost:9081 http://localhost:9081 ws://localhost:9082 http://localhost:9082 ws://localhost:9084 http://localhost:9084"
 
-jobs:
-  include:
-    - stage: one
-      script: echo 1
-
-    - stage: two
-      script: echo 2
-     
-    - script: echo 3
-    - script: echo 4
-    - script: echo 5
-     
-    - stage: three
-      script: echo 6
-     
-    - script: echo 7
-    - script: echo 8
-    - script: echo 9
-    - script: echo 10
+script: true
