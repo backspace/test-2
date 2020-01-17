@@ -2,5 +2,8 @@ language: c++
 os: osx
 osx_image: xcode9.2
 script: 
-- gem install dpl --pre
+- git clone https://github.com/travis-ci/dpl.git
+- cd dpl
+- gem build dpl.gemspec
+- gem install dpl*.gem
 - dpl releases --token foo
