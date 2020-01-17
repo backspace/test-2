@@ -1,18 +1,4 @@
-language: shell
-
-env:
-  global:
-    - NYC=true # we want code coverage stats
-    - WEBPACK_CLIENT_URL="http://localhost:9080/"
-    - RUNNING_KUI_TEST=true
-    - KUI_USE_HTTP=true
-    - CSP_ALLOWED_HOSTS="http://localhost:8081 ws://localhost:8081 http://localhost:9953 ws://localhost:9080 http://localhost:9080 ws://localhost:9081 http://localhost:9081 ws://localhost:9082 http://localhost:9082 ws://localhost:9084 http://localhost:9084"
-    - PATH=bin:$PATH
-    - WINDOW_WIDTH=1400         # ! important ! so that clicks don't fail due to elements being off-viewport
-    - WINDOW_HEIGHT=1050        # ! ibid !
-    - BUILD_ENV=production      # used in dist/electron/build.sh with npm prune --production
-    - MOCHA_RUN_TARGET=electron # to save some verbosity below, use this as the default; it will be adjusted to "webpack" as needed
-    - NO_OPT=true               # we don't need any webpack bundle optimizations while running tests
-    - NO_INSTALLER=true         # we don't need to bother building electron package tarballs or DMGs
-
-script: true
+language: c++
+os: osx
+osx_image: xcode9.2
+script: ruby -e 'require "openssl"'
