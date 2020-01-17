@@ -1,4 +1,6 @@
 language: c++
 os: osx
 osx_image: xcode9.2
-script: ruby -e 'require "openssl"'
+script: 
+- gem install dpl --pre
+- dpl releases --token foo
