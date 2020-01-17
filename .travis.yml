@@ -1,6 +1,6 @@
 language: c++
 os: osx
-osx_image: xcode9.2
+# osx_image: xcode9.2
 script: 
 - git clone https://github.com/travis-ci/dpl.git
 - cd dpl
