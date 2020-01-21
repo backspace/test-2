@@ -1,8 +1,7 @@
 language: shell
-script: true
-before_install: echo before_install
 jobs:
   include:
-    - name: one
-    - name: two
-      before_install: []
+  - name: one
+    script: false
+  allow_failures:
+   - name: one
