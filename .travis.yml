@@ -5,4 +5,4 @@ jobs:
   include:
     - name: one
     - name: two
-      before_install: skip
+      before_install: []
