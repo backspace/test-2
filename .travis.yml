@@ -1,7 +1,9 @@
 language: shell
 jobs:
   include:
-  - name: one
+  - env: FOO=foo
     script: false
+  - env: FOO=bar
+    script: true
   allow_failures:
-   - name: one
+   - env: FOO=foo
