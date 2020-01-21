@@ -1,2 +1,6 @@
 language: shell
 script: true
+before_install: echo before_install
+jobs:
+  include:
+    - before_install: []
