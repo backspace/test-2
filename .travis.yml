@@ -3,4 +3,6 @@ script: true
 before_install: echo before_install
 jobs:
   include:
-    - before_install: []
+    - name: one
+    - name: two
+      before_install: []
