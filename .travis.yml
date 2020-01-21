@@ -5,4 +5,4 @@ jobs:
     script: "false"
   allow_failures:
    - name: one
-     branch: master
+     branch: other
