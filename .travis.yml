@@ -1,8 +1,8 @@
 language: shell
-script: false
 jobs:
   include:
   - name: one
+    script: "false"
   allow_failures:
    - name: one
      branch: master
