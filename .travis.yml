@@ -2,6 +2,7 @@ language: shell
 env:
   global:
   - secure: "aP7oy9+oz/x3bqXJQwg7j8Vl3cM1w8dnd5i2lz4+bNicYUaOgtMlpdlzZ6s9ECJxmesTdkoUyELbJWwU1KpMaIPbjkIvWRyd/yUXJGprEQl+dhj29RArok++v9kMb7G4gvAUREmWwohtHVxhcl+tHpY7f13758OWMW0uXEVLHz5qdTe+Q3vvS6oYfVAaNJnjyfElusfyIL1uTgZLvw0i+cPqMEaGIk3Mb5n16puhNKNpwcYUFxksQ2EgQQe9vZ042QGLC54RGHVPHycq4k7nVJ9b6KIb2xm61MJxsgvK8gkZ2VbWsEbkP/ipfgXtQkzbE56MrfX0s3JIVAK7i3HGEQsm1R93T+7VUJ9ZB3K+XRyKEtqju1UUK0OY9p/t2MoU9baTt5qEYkMchNk57nwT3KHCG2kM9Id+DI2Z05iw4Hml7MU/15NJFBlfEAo//vAWJiaJE+9I4hsA3z2jcZZ1gp2EkpSDMqugKHiBFWeDdiPkqKXsVrnOIHr8TAgSGdERZN/0wBmhXkwxBUIEAjjOCWHW4OXHgrX1Tlpox8UfukbDYfzSaNCtCBsRxcGTir/R8tt/nXonxoY/wUQNO3IbQK+6M8nqg87USgt0TDkAjzJsLs/tGH+xlAJBtYMIKxN458p+xGKm0khtZxOSu9s7nY6th6Acxx+TWqcljJFcZ8w="
-  - BAR=1
+  - BAR=bar
+  - BAZ=baz
 
 script: true
