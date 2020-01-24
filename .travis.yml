@@ -2,6 +2,6 @@ language: shell
 
 env:
   matrix:
-  - ONE_ONE=1 TWO=2 THREE=3
+  - ONE___=1 TWO=2 THREE=3
 
 script: true
