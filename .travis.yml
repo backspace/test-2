@@ -2,7 +2,7 @@ language: shell
 
 script: true
 
-import: ./one.yml
+import: svenfuchs/test:one.yml
 
 env:
   global:
