@@ -1,11 +1,19 @@
 language: shell
 
-script: true
-
 env:
   global:
     - TRAVIS_AGENT_DEBUG=true
 
+script: 
+  - mkdir -p tmp
+  - touch tmp/foo
+
 deploy:
   - provider: s3
+    access_key_id:
+      secure: "c/1ix2aMoZBuTyVrzjZow9iw6qCH/lsTwA+YCyKxeP0Z1n0klx6ySRuaywgMM1F5CAzkdyrM+RJ8n07HGyLHTPoq6td9AZn5K1z2XRHMrtsC2skxyayuI3hv547aR/Fu/HLdwFa/87J1nde7s6TdWXM/AHJ2eVRcUZjqaddfLjROvxdmUSmsBVv2to6vzcNPtamcXuPQh5H5FO//wUgRgzhJgMH9AYVtTFGRaCEAsiab1catVQhRKyOCEA5x/p1Dc/BsNJUBbYcEeWAIdQRfuE8VvdA+9Qy+9fxDP4soOhtbhgNzXUBb/9+keV185rvoAnUaXDiE6HneFW/2LgSV1Qcu2xEslG7tGRCIqW7tpRoWgPIQeV5cOHS6gqypvoN3s3ZGpVytv9nJIOt/nY55nghElM+yimgohJDPwwKndXCTk3LBb/z/noZPu8stz/DJzScIiIGtv90SW1LBWZf8sflAaiTMqzo/kdQDif4X5FX+tFeAE8nAaFTmBQU5+wNbanEE1lyaIRcd/Bg01rsEjTTJv9u0n6mZuJGBVbaIkH4Do2QtcZAfVlj2f5Muqf0U4kbt/rVSSeLobPypbmg9n5KWcBKCKdByL3pxL0jdeNKOBavJ5LL0SoZNnLLde944i1JFyUd4HiyQ9td4L9EvAPWiBa58BOwqfjSOfygKECs="
+    secret_access_key:
+      secure: "hDs6jF97DJ2Ew3RMI8GbELtwH7s8Hj1+soG4BaPziUZY9rjnIRkYlxuvooI0bfR2fO5SkEo7soDmi/R69zH7petJy/tJw1k+21vSLg7ZpmxtiMwGO6rqYdM9tr6qpVE/X7baRaC8XvxnGKCIOmKBUO5caWBSBxbezkRKpY8gofSv03fhGbIiU+q65vw5qnc4zMNTE/xf+SEpnTdIH0/wKBqT6jgqYr1JxmY8umxACNjwCbGjIYC+8GEzcNayxJxxWP7pWSlISzXaHW2/6bRrNAHP7VlWpQpgOPAUtwxKyQN6YIueRp1XO+wznKkz2FzKrDiWN5SeQAeyxArnzbfxCcHLtVGKWYegQBw0FD4UqcW+N3EFGGmT949qPnUBBsT3Q7KlYpaBBsrUyM/FqkEBEVmK596BN8OqYcuJpHgs0Artjz5qtJfSgS51azPj68ps4R5Khh7jlDUE4bfylDxfpw066GfNDlp7qk/qRef+m4DkjK2Z+UrmU3O1thPBUnO98+LswF/BuGHVVd3c02h+Axid5mu78TyqiwMLlv276BuuVhNI230a+MO6P43KfC8OyXdAW9DfqUvBd0BPUTVIGQa2b8KPina5GHq96TGU9S0r9sb7qLX1ESOOSll6Bb33NavXp9GyYkg5dQBtYXusTHIqIyyiZhO/UXigEQYJxzo="
+    bucket: travis-dpl-test
+    local_dir: tmp
     edge: true
