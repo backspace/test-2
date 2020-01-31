@@ -1,19 +1,5 @@
-language: shell
+os:
+- linux
+- osx
 
-env:
-  global:
-    - TRUNK_BRANCH="master"
-
-jobs:
-  include:
-    - stage: unit tests
-      script: true
-    - stage: build and release
-      if: (branch = env(TRUNK_BRANCH) OR branch =~ /^(\d+\.)?\d+-stable$/) AND type = push
-      script: true
-    - stage: deploy to dev
-      if: branch = env(TRUNK_BRANCH) AND type = push
-      script: true
-    - stage: deploy to demo
-      if: branch =~ /^(\d+\.)?\d+-stable$/ AND type = push
-      script: true
+script: true
