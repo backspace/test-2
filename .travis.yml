@@ -2,7 +2,7 @@ language: shell
 
 env:
   global:
-    - TRUNK_BRANCH=master
+    - TRUNK_BRANCH="master"
 
 jobs:
   include:
