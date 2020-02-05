@@ -1,9 +1,2 @@
-language: ruby
-
-bundler_args: '--without production'
-
-script: true
-
-jobs:
-  include:
-  - bundler_args: ''
+language: shell
+script: 'date -u +"%Y-%m-%d %H:%M:%S -0000" --date "next Year"'
