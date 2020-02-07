@@ -1,1 +1,2 @@
 language: shell
+script: echo $TRAVIS_BUILD_DIR
