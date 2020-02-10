@@ -1,2 +1,4 @@
 language: shell
+os: windows
+os: linux
 script: echo $TRAVIS_BUILD_DIR
