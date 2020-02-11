@@ -1,4 +1,3 @@
 language: shell
-os: windows
-os: linux
+virt: lxd
 script: echo $TRAVIS_BUILD_DIR
