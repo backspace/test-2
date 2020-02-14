@@ -1,9 +1,2 @@
-{
-  "os": [
-    "linux"
-  ],
-  "script": [
-    "true"
-  ],
-  "language": "shell"
-}
+language: shell
+import: one.yml
