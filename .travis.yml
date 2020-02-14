@@ -1,4 +1,3 @@
 language: shell
-script: echo $TRAVIS_BUILD_DIR
-addons:
-  sonarcloud: true
+script: true
+import: svenfuchs/test-1:other.yml
