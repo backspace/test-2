@@ -1,3 +1,4 @@
 language: shell
-virt: lxd
 script: echo $TRAVIS_BUILD_DIR
+addons:
+  sonarcloud: true
