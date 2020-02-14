@@ -1,2 +1,9 @@
-language: shell
-script: true
+{
+  "os": [
+    "linux"
+  ],
+  "script": [
+    "true"
+  ],
+  "language": "shell"
+}
