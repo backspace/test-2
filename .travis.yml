@@ -1,3 +1,2 @@
 language: shell
 script: true
-import: svenfuchs/test-1:other.yml
