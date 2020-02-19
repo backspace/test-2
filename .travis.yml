@@ -6,4 +6,3 @@ env:
 
 script:
 - echo $FOO
-- echo $BAR
