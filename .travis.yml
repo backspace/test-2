@@ -2,14 +2,12 @@ language: shell
 jobs:
   allow_failures:
     - name: Allow Failures
-    - name: Only Feature Branch Allow Failures
+    - name: Allow Failures on Feature Branches
       if: branch != master
   include:
-    - stage: Test (Allow Failures)
-      name: Allow Failures
+    - name: Allow Failures
       script: exit 1
-    - name: Only Feature Branch Allow Failures
+    - name: Allow Failures on Feature Branches
       script: exit 1
-    - stage: Deploy
-      name: Deploy
-      script: echo "DEPLOY FOR $TRAVIS_BRANCH"
+    - name: Not Allowed to Fail
+      script: echo "not allowed to fail"
