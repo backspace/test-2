@@ -1,2 +1,17 @@
 language: shell
 script: true
+
+stages:
+- one
+- two
+
+jobs:
+  include:
+    - name: three
+      stage: two
+    - name: two
+      stage: two
+    - name: one
+      stage: one
+  allow_failures:
+    - name: three
