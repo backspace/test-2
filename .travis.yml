@@ -1,13 +1,2 @@
 language: shell
-jobs:
-  allow_failures:
-    - name: Allow Failures
-    - name: Allow Failures on Feature Branches
-      if: branch != master
-  include:
-    - name: Allow Failures
-      script: exit 1
-    - name: Allow Failures on Feature Branches
-      script: exit 1
-    - name: Not Allowed to Fail
-      script: echo "not allowed to fail"
+script: true
