@@ -11,4 +11,3 @@ jobs:
     env: BAZ=baz
   allow_failure:
   - env: FOO=foo
-    
