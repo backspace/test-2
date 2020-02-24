@@ -1,5 +1,6 @@
 language: shell
 script: true
 
-addons:
-  firefox: 47.0.1
+deploy:
+- provider: npm
+  api_key: key
