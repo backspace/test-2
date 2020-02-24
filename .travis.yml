@@ -1,7 +1,14 @@
 language: node_js
 script: true
 
-deploy:
-- provider: npm
-  email: email@email.com
-  api_key: keykeykeykeykey
+env:
+- FOO=foo
+- BAR=bar
+
+jobs:
+  include:
+  - stage: other
+    env: BAZ=baz
+  allow_failure:
+  - env: FOO=foo
+    
