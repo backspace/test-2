@@ -9,5 +9,5 @@ jobs:
   include:
   - stage: other
     env: BAZ=baz
-  allowed_failures:
+  allow_failures:
   - env: FOO=foo
