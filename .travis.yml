@@ -4,4 +4,4 @@ script: true
 deploy:
 - provider: npm
   email: email@email.com
-  api_key: key
+  api_key: keykeykeykeykey
