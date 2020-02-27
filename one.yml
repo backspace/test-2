@@ -1,1 +1,2 @@
 script: echo "hello from one.yml"
+import: ./two.yml
