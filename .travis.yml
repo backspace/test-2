@@ -2,3 +2,5 @@ language: shell
 env:
   global:
   - FOO=foo
+  jobs:
+  - BAR=bar
