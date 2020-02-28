@@ -1,11 +1,4 @@
 language: shell
-import: one.yml
-script: true
-jobs:
-  include:
-  - name: one
-    stage: one
-  - name: two
-    stage: two
-  allow_failures:
-  - name: one
+env:
+  global:
+  - FOO=foo
