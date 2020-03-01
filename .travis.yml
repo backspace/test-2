@@ -1,6 +1,8 @@
-language: shell
+language: ruby
+rvm: 
+  - 2.5
+  - 2.6
 env:
-  global:
-  - FOO=foo
   jobs:
+  - FOO=foo
   - BAR=bar
