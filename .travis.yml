@@ -1,8 +1,9 @@
 language: shell
 env:
   global:
-  - ONE=one
+  - ONE: one
 jobs:
   include:
-    - env: ONE=two
+    - env: 
+        ONE: 
 script: echo $ONE
