@@ -1,7 +1,8 @@
 language: shell
+env:
+  global:
+  - ONE=one
 jobs:
   include:
-    - name: one
-      if: env(ONE) = one
-    - name: two
-      if: env(TWO) = two
+    - env: ONE=two
+script: echo $ONE
