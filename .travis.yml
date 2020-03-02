@@ -4,6 +4,5 @@ env:
   - ONE: one
 jobs:
   include:
-    - env: 
-        ONE: 
+    - env: ONE= 
 script: echo $ONE
