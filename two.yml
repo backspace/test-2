@@ -1,1 +1,2 @@
-script: echo hello from two.yml
+script: 
+- echo hello from two.yml
