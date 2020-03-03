@@ -1,7 +1,4 @@
-version: ~> 1.0
-language: node_js
-os:
- - linux
+language: shell
 import:
- - ljharb/travis-ci:node/all.yml
- - ljharb/travis-ci:node/pretest.yml
+- one.yml
+- two.yml
