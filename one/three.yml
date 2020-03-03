@@ -1,0 +1,3 @@
+import: one/four.yml
+script:
+- echo hello from one/three.yml
