@@ -1,4 +1,0 @@
-env:
-  global:
-    - TWO=two
-after_script: echo "hello from two.yml"
