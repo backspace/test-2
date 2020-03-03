@@ -1,1 +1,1 @@
-import: other.yml
+script: echo hello from two.yml
