@@ -1,0 +1,3 @@
+import: two.yml
+script:
+- echo hello from one/two.yml
