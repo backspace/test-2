@@ -1,8 +1,7 @@
-language: shell
-env:
-  global:
-  - ONE: one
-jobs:
-  include:
-    - env: ONE= 
-script: echo $ONE
+version: ~> 1.0
+language: node_js
+os:
+ - linux
+import:
+ - ljharb/travis-ci:node/all.yml
+ - ljharb/travis-ci:node/pretest.yml
