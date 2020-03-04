@@ -8,8 +8,8 @@ env:
   - THREE=three
 
 jobs:
-  - include:
-    - env: 
-      - FOUR=four
-  - exclude:
+  include:
+  - env: 
+    - FOUR=four
+  exclude:
     if: env(TWO) = two
