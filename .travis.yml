@@ -11,5 +11,5 @@ jobs:
   include:
   - env: 
     - FOUR=four
-  exclude:
+  allow_failure:
     if: env(TWO) = two
