@@ -1,13 +1,14 @@
-language: node_js
-node_js:
-  - 10
-  - 12
+language: shell
+
+env:
+  global: 
+  - ONE=one
+  jobs: 
+  - TWO=two
 
 jobs:
   - include:
-    - stage: update mirror
-      node_js: 12
-      if: branch = master AND type = api AND os = linux
-      
-install: true
-script: true
+    - env: 
+      - THREE=three
+  - exclude:
+    if: env(ONE) = one
