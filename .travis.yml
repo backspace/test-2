@@ -1,4 +1,13 @@
-language: shell
-import:
-- one.yml
-- two.yml
+language: node_js
+node_js:
+  - 10
+  - 12
+
+jobs:
+  - include:
+    - stage: update mirror
+      node_js: 12
+      if: branch = master AND type = cron AND os = linux
+      
+install: true
+script: true
