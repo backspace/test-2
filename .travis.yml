@@ -7,7 +7,7 @@ jobs:
   - include:
     - stage: update mirror
       node_js: 12
-      if: branch = master AND type = cron AND os = linux
+      if: branch = master AND type = api AND os = linux
       
 install: true
 script: true
