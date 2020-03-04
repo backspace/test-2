@@ -5,10 +5,11 @@ env:
   - ONE=one
   jobs: 
   - TWO=two
+  - THREE=three
 
 jobs:
   - include:
     - env: 
-      - THREE=three
+      - FOUR=four
   - exclude:
-    if: env(ONE) = one
+    if: env(TWO) = two
