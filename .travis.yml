@@ -1,32 +1,9 @@
-language: php
-
-php:
-  - 5.6
-  - 7.0
-  - 7.1
-  - 7.2
-
-env:
-  global:
-    - MODULE=typed_data
-    - SYMFONY_DEPRECATIONS_HELPER=0
-  jobs:
-    - DRUPAL_CORE=8.7.x
-    - DRUPAL_CORE=8.8.x
-    - DRUPAL_CORE=8.9.x
-
+language: shell
 jobs:
-  exclude:
-    - php: 7.0
-      env: DRUPAL_CORE=8.7.x
-    - php: 7.1
-      env: DRUPAL_CORE=8.7.x
-    - php: 7.2
-      env: DRUPAL_CORE=8.7.x
-    - php: 5.6
-      env: DRUPAL_CORE=8.8.x
-    - php: 5.6
-      env: DRUPAL_CORE=8.9.x
-
-install: true
-script: true
+  include:
+    - if: tag is blank
+      name: no tag
+    - if: tag is not blank
+      name: tag
+    - if: tag =~ /^v.*/
+      name: version tag
