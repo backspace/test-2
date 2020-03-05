@@ -1,9 +1,31 @@
 language: shell
-jobs:
+
+default-cflags: &default-cflags
+  CFLAGS="-Wall -Wextra -Werror -Wno-unused-parameter -Wno-unused-function"
+
+env:
+  global:
+    - RUST_VERSION="stable"
+    - RUST_VERSION_MIN="1.34.2"
+    - RUST_VERSION_KNOWN="1.37.0"
+
+matrix:
+  allow_failures:
+    - env:
+        - NAME="linux,gcc,rust-stable"
+        - *default-cflags
+        - RUST_VERSION="stable"
+        - ARGS="--enable-rust-strict"
+        - DO_CHECK_SETUP_SCRIPTS="yes"
+        - DO_DISTCHECK="yes"
   include:
-    - if: tag is blank
-      name: no tag
-    - if: tag is not blank
-      name: tag
-    - if: tag =~ /^v.*/
-      name: version tag
+    - name: one
+    - os: linux
+      compiler: gcc
+      env:
+        - NAME="linux,gcc,rust-stable"
+        - *default-cflags
+        - RUST_VERSION="stable"
+        - ARGS="--enable-rust-strict"
+        - DO_CHECK_SETUP_SCRIPTS="yes"
+        - DO_DISTCHECK="yes"
