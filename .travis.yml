@@ -27,3 +27,6 @@ jobs:
       env: DRUPAL_CORE=8.8.x
     - php: 5.6
       env: DRUPAL_CORE=8.9.x
+
+install: true
+script: true
