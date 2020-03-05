@@ -2,20 +2,13 @@ language: shell
 
 env:
   global:
-    - WILLIAM=1234
+    - JOBS=1
 
 jobs:
-  include:
-    # Fake job for debugging.
-    - if: env(WILLIAM) IS present
-      name: This works
-      script:
-        - env
+  allow_failures:
+    - env: ONE=one
 
-    # Fake job for debugging.
-    - if: env(WILLIAM) IS present
-      name: This does not work
-      env:
-        - ANYTHING=HERE
-      script:
-        - env
+  include:
+    - env: ONE=one
+    - env: TWO=two
+    - env: THREE=three
