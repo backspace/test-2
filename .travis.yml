@@ -2,11 +2,12 @@ language: shell
 
 env:
   global:
-    - JOBS=1
+    - GLOBAL=true
 
 jobs:
   allow_failures:
-    - env: ONE=one
+    - env: GLOBAL=true ONE=one
+    - env: TWO=two
 
   include:
     - env: ONE=one
