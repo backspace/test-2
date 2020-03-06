@@ -1,13 +1,6 @@
 language: shell
-
-env:
-  global:
-    - FOUR=four
-
 jobs:
-  allow_failures:
-    - env: TWO=two
-
   include:
-    - env: TWO=two
-    - env: ONE=one THREE=three
+    - name: one
+    - name: two
+      if: fork = false
