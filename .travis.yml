@@ -1,5 +1,9 @@
 language: shell
 
+env:
+  global:
+    - FOUR=four
+
 jobs:
   allow_failures:
     - env: TWO=two
