@@ -2,10 +2,4 @@ language: shell
 
 env:
   global:
-    - X=Y
-
-jobs:
-  include:
-    - name: one
-    - name: two
-      if: env(SETTING) is present
+    - secure:
