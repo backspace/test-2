@@ -9,5 +9,5 @@ jobs:
     - env: TWO=two
 
   include:
-    - env: ONE=one TWO=two
+    - env: TWO=two
     - env: ONE=one THREE=three
