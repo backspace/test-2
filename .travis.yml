@@ -1,6 +1,11 @@
 language: shell
+
+env:
+  global:
+    - X=Y
+
 jobs:
   include:
     - name: one
     - name: two
-      if: fork = false
+      if: type = push AND env(SETTING) is present
