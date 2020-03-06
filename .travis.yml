@@ -8,4 +8,4 @@ jobs:
   include:
     - name: one
     - name: two
-      if: type = push AND env(SETTING) is present
+      if: env(SETTING) is present
