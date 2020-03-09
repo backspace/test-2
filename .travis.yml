@@ -1,5 +1,1 @@
 language: shell
-
-env:
-  global:
-    - secure:
