@@ -12,4 +12,3 @@ jobs:
     - stage: build
       name: Debug
       env: BUILD_TYPE=Debug
-
