@@ -2,7 +2,7 @@ os: shell
 
 env:
   global:
-  - PATTERN="^release/([0-9\.]+)$"
+  - PATTERN="^staging.*$"
 
 stages:
 - name: build
