@@ -6,4 +6,6 @@ env:
 jobs:
   include:
     - name: one
-      if:  type != pull_request AND repo = env(SLUG)
+      if:  repo = env(SLUG)
+    - name: two
+      if:  repo != env(SLUG)
