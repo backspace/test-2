@@ -1,11 +1,14 @@
 language: shell
+  
+script: echo "This is ${TRAVIS_JOB_NAME}"
 
 env:
   global:
-    - SLUG="svenfuchs/test-2"
+    - FOO=BanzaiMan/travis_production_test
+    
 jobs:
   include:
-    - stage: one
-      if:  repo = env(SLUG)
-    - stage: two
-      if:  repo != env(SLUG)
+    - name: one
+    - name: two
+      if: type = push AND env(FOO) = BanzaiMan/travis_production_test
+    
