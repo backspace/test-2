@@ -1,9 +1,24 @@
-language: shell
-  
+os: linux
+dist: bionic
+language: cpp
+
+git:
+  submodules: false
+
 env:
   global:
+  - SNAPCRAFT_ENABLE_ERROR_REPORTING=0
+  # regexes for release branch and tag
   - MULTIPASS_RELEASE_BRANCH_PATTERN="^release/([0-9\.]+)$"
   - MULTIPASS_RELEASE_TAG_PATTERN="^v([0-9]+\.[0-9]+)\.[0-9]+$"
+  # build label added to the version string
+  - MULTIPASS_BUILD_LABEL=""
+  # whether to publish the built packages
+  - MULTIPASS_PUBLISH=""
+  # which channel to publish to
+  - MULTIPASS_SNAP_CHANNEL=""
+  # options to pass to the build reporter
+  - MULTIPASS_REPORT_OPTIONS=()
 
 stages:
 - name: build
@@ -13,14 +28,45 @@ stages:
           OR branch ~= env(MULTIPASS_RELEASE_BRANCH_PATTERN)
           OR branch ~= env(MULTIPASS_RELEASE_TAG_PATTERN)))
     OR type = pull_request
-    
+- name: process snaps
+  if: type = cron
+
 jobs:
   include:
-    - name: one
+    - &snapcraft-build
+      stage: build
+      name: Debug
+      env: BUILD_TYPE=Debug
+
+      git:
+        depth: false
+        submodules: true
+
+    - <<: *snapcraft-build
+      name: Clang
+      env: BUILD_TYPE=Clang
+
+    - <<: *snapcraft-build
+      name: RelWithDebInfo
+      env: BUILD_TYPE=RelWithDebInfo
+
+    - <<: *snapcraft-build
+      name: Coverage
+      env: BUILD_TYPE=Coverage
+
     - stage: build
       name: macOS
       env: BUILD_TYPE=macOS
       if: |
         repo = canonical/multipass
                AND (type != pull_request
-                    OR head_repo = repo)   
+                    OR head_repo = repo)
+      git:
+        submodules: false
+
+    - stage: process snaps
+      name: Process snaps
+      env: ~
+      language: python
+      python: 3.8
+
