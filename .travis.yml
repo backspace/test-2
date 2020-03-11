@@ -5,7 +5,7 @@ env:
     - SLUG="svenfuchs/test-2"
 jobs:
   include:
-    - name: one
+    - stage: one
       if:  repo = env(SLUG)
-    - name: two
+    - stage: two
       if:  repo != env(SLUG)
