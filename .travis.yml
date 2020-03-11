@@ -23,17 +23,3 @@ jobs:
       name: Debug
       env: BUILD_TYPE=Debug
 
-    - stage: build
-      name: macOS
-      env: BUILD_TYPE=macOS
-      if: |
-        repo = canonical/multipass
-               AND (type != pull_request
-                    OR head_repo = repo)
-
-    - stage: process snaps
-      name: Process snaps
-      env: ~
-      language: python
-      python: 3.8
-
