@@ -1,1 +1,9 @@
 language: shell
+
+env:
+  global:
+    - SLUG="svenfuchs/test-2"
+jobs:
+  include:
+    - name: one
+      if:  type != pull_request AND repo = env(SLUG)
