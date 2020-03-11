@@ -2,15 +2,11 @@ os: shell
 
 env:
   global:
-  - MULTIPASS_RELEASE_BRANCH_PATTERN="^release/([0-9\.]+)$"
+  - PATTERN="^release/([0-9\.]+)$"
 
 stages:
 - name: build
-  if: | 
-    (type = push
-     AND (branch IN (staging, trying, master)
-          OR branch ~= env(MULTIPASS_RELEASE_BRANCH_PATTERN)))
-    OR type = pull_request
+  if: branch ~= env(PATTERN)
 jobs:
   include:
     - stage: build
