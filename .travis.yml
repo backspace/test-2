@@ -1,6 +1,6 @@
 language: shell
-include:
-  jobs:
+jobs:
+  include:
   - name: one
   - name: two
     if: commit_message !~ /([skip-dev])/
