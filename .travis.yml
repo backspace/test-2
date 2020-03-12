@@ -1,21 +1,23 @@
-language: shell
-  
-env:
-  global:
-  - MULTIPASS_RELEASE_BRANCH_PATTERN="^release/([0-9\.]+)$"
-  - MULTIPASS_RELEASE_TAG_PATTERN="^v([0-9]+\.[0-9]+)\.[0-9]+$"
+language: cpp
+os: linux
+dist: xenial
 
-stages:
-- name: build
-  if: | # bors and release branches, release tags and all pull requests
-    (type = push
-     AND (branch IN (staging, trying, master)
-          OR branch ~= env(MULTIPASS_RELEASE_BRANCH_PATTERN)
-          OR branch ~= env(MULTIPASS_RELEASE_TAG_PATTERN)))
-    OR type = pull_request
-    
+linux-ppc64le: &linux-ppc64le
+  os: linux-ppc64le
+
+linux-s390x: &linux-s390x
+  os: linux
+  arch: s390x
+  dist: bionic
+
 jobs:
   include:
-    - name: one
-    - stage: build
-      name: two
+    - <<: *linux-ppc64le
+      compiler: gcc
+    - <<: *linux-ppc64le
+      compiler: clang
+    - <<: *linux-s390x
+      compiler: gcc
+    - <<: *linux-s390x
+
+script: true
