@@ -1,23 +1,5 @@
 language: cpp
 os: linux
 dist: xenial
-
-linux-ppc64le: &linux-ppc64le
-  os: linux-ppc64le
-
-linux-s390x: &linux-s390x
-  os: linux
-  arch: s390x
-  dist: bionic
-
-jobs:
-  include:
-    - <<: *linux-ppc64le
-      compiler: gcc
-    - <<: *linux-ppc64le
-      compiler: clang
-    - <<: *linux-s390x
-      compiler: gcc
-    - <<: *linux-s390x
-
-script: true
+arch: ppc64le
+virt: vm
