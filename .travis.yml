@@ -3,3 +3,4 @@ os: linux
 dist: xenial
 arch: ppc64le
 virt: vm
+script: true
