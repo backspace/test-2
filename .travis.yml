@@ -1,6 +1,6 @@
-language: cpp
-os: linux
-dist: xenial
-arch: ppc64le
-virt: vm
-script: true
+language: shell
+include:
+  jobs:
+  - name: one
+  - name: two
+    if: commit_message !~ /([skip-dev])/
