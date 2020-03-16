@@ -1,6 +1,2 @@
 language: shell
-jobs:
-  include:
-  - name: one
-  - name: two
-    if: commit_message !~ /([skip-dev])/
+import: one.yml
