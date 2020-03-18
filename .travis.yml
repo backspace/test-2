@@ -1,2 +1,6 @@
 language: shell
-import: one.yml
+jobs:
+  include:
+    - name: one
+    - name: two
+      if: $FOO=foo
